@@ -5,7 +5,7 @@ b = "42"
 
 begin
    a + b
-ensure
+rescue
    puts "Could not add variables a (#{a.class}) and b (#{b.class})"
 else
    puts "a + b is #{a + b}"

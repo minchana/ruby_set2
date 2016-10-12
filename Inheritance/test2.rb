@@ -32,44 +32,50 @@
 
 
 class Country
-	def initialize
-		puts "This is the Country code."
-	end
+	# def initialize
+	# 	puts "This is the Country code."
+	# end
 
 	def countryCode 
-	 # the country code is 00
+		@countryCode = "00"
+	 puts "countryCode -->00"
 	end
 end
 
-class City
-	def initialize
-		puts "This is the City code."
+class City <Country
+	# def initialize
+	# 	puts "This is the City code."
+	# end
+	def citycode
+		@citycode ="212"
+		puts "cityCode -->212"
 	end
 
 	# define cityCode  --> city code is 212
 end
 
-
-class Number < Country
-	def initialize
-		puts "This is the landline number."
-	end
-
-	# define phoneNumber --> phone number is 2414211
-
-end
-
 class Number < City
-	def initialize
-		puts "This is the landline number."
-	end
-
-	# define phoneNumber --> phone number is 2414211
-
-	def dialNumber
-		puts countryCode cityCode phoneNumber 
+	# def initialize
+	# 	puts "This is the landline number."
+	# end
+	def phoneNumber
+		@phoneNumber="2414211"
+		puts "phoneNumber -->2414211"
 	end
 end
+class Dialnum < Number
+	def initialize
+		countryCode
+		citycode
+		phoneNumber
+	end
+       
+	def dialNumber
+		puts "dialNumber -->#{@countryCode}#{@citycode}#{@phoneNumber}"
+	end
+end
+a=Dialnum.new
+a.dialNumber
 
 
 

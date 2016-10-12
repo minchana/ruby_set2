@@ -6,14 +6,24 @@
 
 class Lottery
 
-  def initialize
-  end
-
-  def method_name
-    
+  def initialize(list)
+  list=list.chomp
+  @gift ={
+  "1" =>"gift1",
+  "2" =>"gift2",
+  "3" =>"gift3",
+  "4" =>"gift4",
+  "5" =>"gift5",
+  "6" =>"gift6",
+  "7" =>"gift7",
+  "8" =>"gift8",
+  "9" =>"gift9",
+  "10" =>"gift10"
+  }
+  puts @gift[list]
   end
 end
 
-number = 'Inut From the user'
+puts 'Inut From the user'
+number = gets
 prize = Lottery.new(number)
-puts prize
